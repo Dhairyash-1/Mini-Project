@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+                        <!-- // testing -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,18 +26,23 @@
           <input type="text" id="names" class="form-control" autocomplete="off" placeholder=" Name" />
           <div class="row">
             <div class="col">
-              <input type="text" id="age" class="form-control m-0" autocomplete="off" placeholder="age" />
+              <input type="number" id="age" min="1" max="100" class="form-control m-0" autocomplete="off" placeholder="Age" />
             </div>
             <div class="col">
               <input type="text" id="designation" class="form-control m-0" autocomplete="off" placeholder="Expertise" />
             </div>
           </div>
           <div class="row py-2">
-            <div class="col">
-              <input type="text" id="gender" class="form-control m-0" autocomplete="off" placeholder="gender" />
+            <div class="form-group col">
+              <!-- <label for="inputState">State</label> -->
+              <select id="gender" class="form-control">
+                <option selected disabled > Select Gender </option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
             </div>
             <div class="col">
-              <input type="text" id="dob" class="form-control m-0" autocomplete="off" placeholder="DOB" />
+              <input type="date" id="dob" class="form-control m-0" autocomplete="off" placeholder="DOB" />
             </div>
           </div>
         </form>
