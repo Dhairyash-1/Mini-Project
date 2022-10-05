@@ -194,3 +194,16 @@ function getMsg(flag, element) {
     }, 4000);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+// let a = serachFun()
+// console.log(serachFun);
