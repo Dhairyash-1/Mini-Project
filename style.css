@@ -2,14 +2,19 @@ body {
     box-sizing: border-box;
 }
 
-.search-box{
+.search-box {
     width: 1200px;
 }
-.search-box input{
+
+.search-box input {
     width: 100%;
     outline: none;
     height: 45px;
     padding: 10px;
+}
+
+.search-box input:focus {
+    border: 2px solid blue;
 }
 
 .d-flex input {

@@ -3,7 +3,7 @@ import prodb, {
   getData,
   createEle,
   SortObj
-} from "./module.js"; 
+} from "./module.js";
 
 
 
@@ -36,9 +36,9 @@ btncreate.onclick = event => {
     age: age.value,
     designation: designation.value,
     gender: gender.value,
-    dob:  dob.value 
+    dob: dob.value
   });
-  
+
 
 
   // reset textbox values
@@ -49,7 +49,7 @@ btncreate.onclick = event => {
   // dob.value = "";
   names.value = age.value = designation.value = gender.value = dob.value = "";
 
-//   // set id textbox value
+  //   // set id textbox value
   getData(db.Employes, data => {
     userid.value = data.id + 1 || 1;
   });
@@ -197,13 +197,3 @@ function getMsg(flag, element) {
 
 
 
-
-
-
-
-
-
-
-
-// let a = serachFun()
-// console.log(serachFun);
