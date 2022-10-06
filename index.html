@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,56 +9,63 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
-            
+
         }
-        body{
+
+        body {
             height: 100vh;
             background: linear-gradient(#e66465, #9198e5);
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .container{
+
+        .container {
             width: 400px;
             background: #fff;
             padding: 15px 20px;
             border-radius: 5px;
-            
-            
+
+
         }
-        #alert{
+
+        #alert {
             display: none;
             color: red;
         }
-        .container form .title{
+
+        .container form .title {
             font-size: 25px;
             font-weight: 600;
             margin-bottom: 10px;
             position: relative;
 
         }
-        .container form .title::before{
+
+        .container form .title::before {
             content: "";
             position: absolute;
-            background: linear-gradient( -45deg, #e66465, #9198e5);
+            background: linear-gradient(-45deg, #e66465, #9198e5);
             height: 3px;
             width: 22px;
             bottom: 0;
             left: 0;
             border-radius: 5px;
         }
-        .container form .user-login{
+
+        .container form .user-login {
             display: flex;
             flex-direction: column;
             margin-bottom: 20px;
             margin-top: 20px;
         }
-        .container form .user-login .box input{
+
+        .container form .user-login .box input {
             width: 100%;
             margin-bottom: 25px;
             height: 45px;
@@ -66,35 +74,38 @@
             border: 1px solid #ccc;
             padding-left: 15px;
             font-size: 17px;
-            border-bottom-width: 3px ;
+            border-bottom-width: 3px;
             position: relative;
         }
-        .container form .user-login .box input:focus{
+
+        .container form .user-login .box input:focus {
             border-color: #e66465;
         }
 
-        .container form .button input{
+        .container form .button input {
             width: 100%;
             height: 45px;
             border: none;
-            background: linear-gradient( -45deg, #e66465, #9198e5);
+            background: linear-gradient(-45deg, #e66465, #9198e5);
             border-radius: 5px;
             color: #fff;
             font-size: 19px;
             font-weight: 600;
         }
-        .container form .button input:hover{
-            background: linear-gradient( 45deg, #e66465, #9198e5);
+
+        .container form .button input:hover {
+            background: linear-gradient(45deg, #e66465, #9198e5);
         }
 
-        @media (max-width:400px){
-            .container{
-                margin: 0 15px 0 15px; 
+        @media (max-width:400px) {
+            .container {
+                margin: 0 15px 0 15px;
 
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h3 id="alert">Incorrect username or password</h3>
@@ -103,44 +114,43 @@
             <div class="title" id="tilt">Login to EMS</div>
             <div class="user-login">
                 <div class="email box">
-                    <input type="text " name="" id="user" placeholder="Username" autocomplete="off" >
-                    
+                    <input type="text " name="" id="user" placeholder="Username" autocomplete="off">
+
                 </div>
                 <div class="password box">
-                    <input type="password" name="" id="pass" placeholder="Enter your password"  >
+                    <input type="password" name="" id="pass" placeholder="Enter your password">
                 </div>
             </div>
             <div class="button">
-                <input type="button" value="Login" onclick="login()" >
+                <input type="button" value="Login" onclick="login()">
             </div>
         </form>
 
     </div>
     <script>
-  
+
         const userdetails = {
-                username : "admin",
-                password : "1234"
+            username: "admin",
+            password: "1234"
         }
-       
+
         var user_name = document.getElementById("user");
 
         var password = document.getElementById("pass");
-        
-          function login() {
-            if(user_name.value == userdetails.username && password.value == userdetails.password){     
+
+        function login() {
+            if (user_name.value == userdetails.username && password.value == userdetails.password) {
                 document.location.href = "dashboard.html";
-          }
-          else{
-            document.getElementById("alert").style.display = "block"
-            console.log("h");
-          }
+            }
+            else {
+                document.getElementById("alert").style.display = "block"
+                console.log("h");
+            }
         }
-        
-   
-            
-        </script>
+
+
+
+    </script>
 </body>
+
 </html>
-
-
