@@ -8,7 +8,7 @@ import prodb, {
 
 
 let db = prodb("Productdb", {
-  Employes: `++id, names, age, designation, gender , dob`
+  Employes: `++id, names, age, designation,mobile, email gender , dob`
 });
 
 // // input tags
@@ -16,6 +16,8 @@ const userid = document.getElementById("userid");
 const names = document.getElementById("names");
 const age = document.getElementById("age");
 const designation = document.getElementById("designation");
+const mobile = document.getElementById("mobile");
+const email = document.getElementById("email");
 const gender = document.getElementById("gender");
 const dob = document.getElementById("dob");
 
@@ -35,6 +37,8 @@ btncreate.onclick = event => {
     names: names.value,
     age: age.value,
     designation: designation.value,
+    mobile: mobile.value,
+    email: email.value,
     gender: gender.value,
     dob: dob.value
   });
@@ -45,9 +49,11 @@ btncreate.onclick = event => {
   // names.value = "";
   // age.value = "";
   // designation.value = "";
+  // mobile.value = "";
+  // email.value = "";
   // gender.value = "";
   // dob.value = "";
-  names.value = age.value = designation.value = gender.value = dob.value = "";
+  names.value = age.value = designation.value = mobile.value = email.value = gender.value = dob.value = "";
 
   //   // set id textbox value
   getData(db.Employes, data => {
@@ -71,6 +77,8 @@ btnupdate.onclick = () => {
       names: names.value,
       age: age.value,
       designation: designation.value,
+      mobile: mobile.value,
+      email: email.value,
       gender: gender.value,
       dob: dob.value
     }).then((updated) => {
@@ -81,7 +89,7 @@ btnupdate.onclick = () => {
       let updatemsg = document.querySelector(".updatemsg");
       getMsg(get, updatemsg);
 
-      names.value = age.value = designation.value = gender.value = dob.value = "";
+      names.value = age.value = designation.value = mobile.value = email.value = gender.value = dob.value = "";
       //console.log(get);
     })
   } else {
@@ -162,6 +170,8 @@ const editbtn = (event) => {
     names.value = newdata.names || "";
     age.value = newdata.age || "";
     designation.value = newdata.designation || "";
+    mobile.value = newdata.mobile || "";
+    email.value = newdata.email || "";
     gender.value = newdata.gender || "";
     dob.value = newdata.dob || "";
   });

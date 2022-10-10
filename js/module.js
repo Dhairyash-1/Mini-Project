@@ -70,6 +70,8 @@ const SortObj = (sortobj) => {
     names: sortobj.names,
     age: sortobj.age,
     designation: sortobj.designation,
+    mobile: sortobj.mobile,
+    email: sortobj.email,
     gender: sortobj.gender,
     dob: sortobj.dob
   };
